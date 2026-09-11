@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uam.solicitudesservicios.controller.RegistroClientesController">
+   <children>
+      <VBox alignment="CENTER" layoutX="10.0" layoutY="14.0" prefHeight="370.0" prefWidth="580.0" spacing="10.0">
+         <children>
+            <Label text="Registro Clientes">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Label>
+            <Separator prefWidth="200.0" />
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="285.0" minWidth="10.0" prefWidth="119.4" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="478.99999237060547" minWidth="10.0" prefWidth="460.20000000000005" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Nombre:">
+                     <font>
+                        <Font name="Times New Roman" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Correo:" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Times New Roman" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Teléfono:" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Times New Roman" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Tipo de Cliente:" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Times New Roman" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtNombre" promptText="Ingrese el nombre completo del cliente" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Times New Roman" size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtCorreo" promptText="Ingrese el correo electrónico del cliente" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Times New Roman" size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtTelefono" promptText="Ingrese el número telefónico del cliente" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Times New Roman" size="14.0" />
+                     </font>
+                  </TextField>
+                  <ComboBox fx:id="cmbTipo" prefHeight="26.0" prefWidth="290.0" promptText="Seleccione un tipo de cliente" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
+            <Separator prefWidth="200.0" />
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="580.0" spacing="15.0">
+               <children>
+                  <Label text="Documento de Identificación:">
+                     <font>
+                        <Font name="Times New Roman" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtArchivo" prefHeight="26.0" prefWidth="294.0" promptText="Seleccione un Archivo">
+                     <font>
+                        <Font name="Times New Roman" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="btnSeleccionarArchivo" mnemonicParsing="false" onAction="#seleccionarArchivo" text="Seleccionar">
+                     <font>
+                        <Font name="Times New Roman" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="580.0" spacing="15.0">
+               <children>
+                  <Label text="Directorio del Cliente:">
+                     <font>
+                        <Font name="Times New Roman" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtDirectorio" prefHeight="26.0" prefWidth="335.0" promptText="Seleccione el Directorio del Archivo">
+                     <font>
+                        <Font name="Times New Roman" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="btnAgregarDirectorio" mnemonicParsing="false" onAction="#seleccionarDirectorio" text="Seleccionar">
+                     <font>
+                        <Font name="Times New Roman" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="580.0" spacing="20.0">
+               <children>
+                  <Button fx:id="btnGuardarRegistro" mnemonicParsing="false" onAction="#guardarRegistro" text="Guardar">
+                     <font>
+                        <Font name="Times New Roman Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnCrearRegistro" mnemonicParsing="false" onAction="#crearRegistro" text="Crear Solicitud">
+                     <font>
+                        <Font name="Times New Roman Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnLimpiarRegistro" mnemonicParsing="false" onAction="#limpiarRegistro" text="Limpiar">
+                     <font>
+                        <Font name="Times New Roman Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnCerrarRegistro" mnemonicParsing="false" onAction="#cerrarRegistro" text="Cerrar">
+                     <font>
+                        <Font name="Times New Roman Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

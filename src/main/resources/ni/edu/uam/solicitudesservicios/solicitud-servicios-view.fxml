@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="440.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uam.solicitudesservicios.controller.SolicitudServicioController">
+   <children>
+      <VBox alignment="CENTER" layoutX="10.0" layoutY="14.0" prefHeight="410.0" prefWidth="580.0" spacing="15.0">
+         <children>
+            <Label text="Solicitud de Servicios">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Label>
+            <Separator prefWidth="200.0" />
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="284.0" minWidth="10.0" prefWidth="190.99998474121094" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="389.00001525878906" minWidth="10.0" prefWidth="389.00001525878906" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Cliente:">
+                     <font>
+                        <Font name="Times New Roman" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Correo del Cliente:" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Times New Roman" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Tipo de Cliente:" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Times New Roman" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Asunto:" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Times New Roman" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Tipo de Servicio:" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Times New Roman" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Descripción del Problema:" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="Times New Roman" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Archivo Adjunto:" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="Times New Roman" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Carpeta de Evidencias:" GridPane.rowIndex="7">
+                     <font>
+                        <Font name="Times New Roman" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtCliente" promptText="Ingrese el nombre del Cliente" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Times New Roman" size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtCorreoCliente" promptText="Ingrese el correo del cliente" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Times New Roman" size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtTipoCliente" promptText="Ingrese el tipo de cliente" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Times New Roman" size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtAsunto" promptText="Ingrese el asunto de la solicitud" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Times New Roman" size="14.0" />
+                     </font>
+                  </TextField>
+                  <ComboBox fx:id="cmbServicio" prefHeight="26.0" prefWidth="390.0" promptText="Seleccione un tipo de servicio" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="txtDescripcion" promptText="Descripción breve del problema" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="Times New Roman" size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtArchivoSolicitud" promptText="Nombre del Archivo" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="Times New Roman" size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtEvidencia" promptText="Directorio" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                     <font>
+                        <Font name="Times New Roman" size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </GridPane>
+            <Separator prefWidth="200.0" />
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="580.0" spacing="20.0">
+               <children>
+                  <RadioButton mnemonicParsing="false" text="Prioridad">
+                     <font>
+                        <Font name="Times New Roman" size="14.0" />
+                     </font>
+                  </RadioButton>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" />
+                  <Label text="Solamente marque la casilla si requiere una atención urgente o se lo solicitan">
+                     <font>
+                        <Font name="Times New Roman" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="580.0" spacing="20.0">
+               <children>
+                  <Button fx:id="btnGuardarSolicitud" mnemonicParsing="false" onAction="#guardarSolicitud" text="Guardar">
+                     <font>
+                        <Font name="Times New Roman Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnCrearSolicitud" mnemonicParsing="false" onAction="#crearsolicitud" text="Crear Solicitud">
+                     <font>
+                        <Font name="Times New Roman Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnLimpiarSolicitud" mnemonicParsing="false" onAction="#limpiarSolicitud" text="Limpiar">
+                     <font>
+                        <Font name="Times New Roman Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnCerrarSolicitud" mnemonicParsing="false" onAction="#cerrarSolicitud" text="Cerrar">
+                     <font>
+                        <Font name="Times New Roman Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children></VBox>
+   </children>
+</AnchorPane>

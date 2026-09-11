@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="apPrincipal" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uam.solicitudesservicios.controller.MenuPrincipalController">
+   <children>
+      <MenuBar prefHeight="26.0" prefWidth="600.0">
+        <menus>
+          <Menu fx:id="mnuCatalogos" mnemonicParsing="false" text="Catálogos">
+            <items>
+              <MenuItem fx:id="miClientes" mnemonicParsing="false" onAction="#abrirRegistroClientes" text="Registro Clientes" />
+                  <MenuItem fx:id="miServicios" mnemonicParsing="false" onAction="#abrirSolicitudServicios" text="Solicitud de Servicios" />
+            </items>
+          </Menu>
+          <Menu fx:id="mnuSalir" mnemonicParsing="false" onAction="#cerrarPrograma" text="Salir" />
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
