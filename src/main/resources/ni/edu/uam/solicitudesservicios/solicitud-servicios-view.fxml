@@ -4,9 +4,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="440.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uam.solicitudesservicios.controller.SolicitudServicioController">
+<AnchorPane prefHeight="539.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uam.solicitudesservicios.controller.SolicitudServicioController">
    <children>
-      <VBox alignment="CENTER" layoutX="10.0" layoutY="14.0" prefHeight="410.0" prefWidth="580.0" spacing="15.0">
+      <VBox alignment="CENTER" layoutX="10.0" layoutY="14.0" prefHeight="513.0" prefWidth="580.0" spacing="15.0">
          <children>
             <Label text="Solicitud de Servicios">
                <font>
@@ -96,22 +96,40 @@
                         <Font name="Times New Roman" size="14.0" />
                      </font>
                   </TextField>
-                  <TextField fx:id="txtArchivoSolicitud" promptText="Nombre del Archivo" GridPane.columnIndex="1" GridPane.rowIndex="6">
-                     <font>
-                        <Font name="Times New Roman" size="14.0" />
-                     </font>
-                  </TextField>
-                  <TextField fx:id="txtEvidencia" promptText="Directorio" GridPane.columnIndex="1" GridPane.rowIndex="7">
-                     <font>
-                        <Font name="Times New Roman" size="14.0" />
-                     </font>
-                  </TextField>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <children>
+                        <TextField fx:id="txtArchivoSolicitud" prefHeight="26.0" prefWidth="289.0" promptText="Seleccione un Archivo">
+                           <font>
+                              <Font name="Times New Roman" size="14.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="btnArchivo" mnemonicParsing="false" onAction="#seleccionarArchivo" text="Seleccionar">
+                           <font>
+                              <Font name="Times New Roman" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                     <children>
+                        <TextField fx:id="txtEvidencia" prefHeight="26.0" prefWidth="286.0" promptText="Seleccione el Directorio">
+                           <font>
+                              <Font name="Times New Roman" size="14.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="btnDirectorio" mnemonicParsing="false" onAction="#seleccionarDirectorioServicio" text="Seleccionar">
+                           <font>
+                              <Font name="Times New Roman" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
                </children>
             </GridPane>
             <Separator prefWidth="200.0" />
             <HBox alignment="CENTER" prefHeight="40.0" prefWidth="580.0" spacing="20.0">
                <children>
-                  <RadioButton mnemonicParsing="false" text="Prioridad">
+                  <RadioButton fx:id="rbPrioridad" mnemonicParsing="false" text="Prioridad">
                      <font>
                         <Font name="Times New Roman" size="14.0" />
                      </font>
@@ -149,6 +167,8 @@
                   </Button>
                </children>
             </HBox>
+            <Separator prefWidth="200.0" />
+            <TextArea fx:id="txtAreaResultado" prefHeight="200.0" prefWidth="200.0" />
          </children></VBox>
    </children>
 </AnchorPane>

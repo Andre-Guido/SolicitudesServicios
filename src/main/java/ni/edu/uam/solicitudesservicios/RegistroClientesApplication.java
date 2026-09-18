@@ -1,7 +1,11 @@
 package ni.edu.uam.solicitudesservicios;
 
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class RegistroClientesApplication extends Application {
 
@@ -10,7 +14,11 @@ public class RegistroClientesApplication extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) {
-
+    public void start(Stage primaryStage) throws IOException {
+        FXMLLoader loader = new FXMLLoader(MenuPrincipalApplication.class.getResource("registro-clientes-view.fxml"));
+        Scene scene = new Scene(loader.load(), 550,550);
+        primaryStage.setTitle("Menú Principal");
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
 }

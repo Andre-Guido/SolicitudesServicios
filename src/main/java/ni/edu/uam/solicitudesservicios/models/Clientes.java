@@ -3,17 +3,21 @@ package ni.edu.uam.solicitudesservicios.models;
 public class Clientes {
     private String nombre;
     private String correo;
-    private int telefono;
+    private String telefono;
     private String tipo;
+    private String archivo;
+    private String directorio;
 
     public Clientes() {
     }
 
-    public Clientes(String nombre, String correo, int telefono, String tipo) {
+    public Clientes(String nombre, String correo, String telefono, String tipo, String archivo, String directorio) {
         this.nombre = nombre;
         this.correo = correo;
         this.telefono = telefono;
         this.tipo = tipo;
+        this.archivo = archivo;
+        this.directorio = directorio;
     }
 
     public String getNombre() {
@@ -32,11 +36,11 @@ public class Clientes {
         this.correo = correo;
     }
 
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 
@@ -46,5 +50,21 @@ public class Clientes {
 
     public void setTipo(String tipo) {
         this.tipo = tipo;
+    }
+
+    public String getArchivo() {
+        return archivo;
+    }
+
+    public void setArchivo(String archivo) {
+        this.archivo = archivo;
+    }
+
+    public String getDirectorio() {
+        return directorio;
+    }
+
+    public void setDirectorio(String directorio) {
+        this.directorio = directorio;
     }
 }
